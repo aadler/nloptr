@@ -1,13 +1,22 @@
+## Resubmission
+
+We now cast `print_level` in `nloptr.c` as `int` instead of `unsigned int`
+as some packages like **pgcs** use negative print levels. This fixes newly
+broken **pgsc** package. See PR[#185](https://github.com/astamm/nloptr/pull/185)
+and related issues [#184](https://github.com/astamm/nloptr/issues/184) and
+[#2](https://github.com/philipbarrett/pgsc/issues/2).
+
 ## Test environments
-* local macOS R installation, R 4.4.1
+* local macOS R installation, R 4.4.3
 * continuous integration via GH actions:
   * macOS latest release
   * windows latest release
   * windows latest release with Rtools42
-  * ubuntu 22.04 latest release and devel using the *building nlopt from source*
+  * Ubuntu 24.04.2 LTS latest release and devel using the *building nlopt from source*
   strategy
-  * ubuntu 22.04 latest release using the *reuse existing build of nlopt*
+  * Ubuntu 24.04.2 LTS latest release using the *reuse existing build of nlopt*
   strategy
+  * Ubuntu 24.04.2 LTS against all versions of nlopt since `2.7.0`.
 * [win-builder](https://win-builder.r-project.org/) (release and devel) NOTHING TO DO
 * [macOS-builder](https://mac.r-project.org/macbuilder/submit.html) CHECKER BROKEN
 * [R-hub](https://builder.r-hub.io)
@@ -23,10 +32,12 @@ There was no ERROR, no WARNING and no NOTE.
 
 ## Downstream dependencies
 
-We checked 145 reverse dependencies (136 from CRAN + 9 from Bioconductor),
-comparing R CMD check results across CRAN and dev versions of this package.
+We checked 160 reverse dependencies (151 from CRAN + 9 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
 
- * We saw 0 new problems
+ * We saw 4 new problems: **PLNmodels**, **missSBM**, **rkriging** and
+ **garma**. All package maintainers have been informed and will soon submit a
+ release to CRAN with a fix.
+ 
  * We failed to check 3 packages
 
 Issues with CRAN packages are summarised below.
