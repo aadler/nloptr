@@ -145,6 +145,14 @@ is set to <code>TRUE</code> when passing a minimization problem to <code>nloptr<
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	tolerance with xtol_abs as well. Criterion is disabled if xtol_rel is</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	non-positive.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x_weights</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	possible values: x_weights &gt; 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	default value:   rep(1.0, length(x0))</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	x_weights is a vector of length n (the number of elements in x)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	giving the relative importance of each parameter x[i] when checking</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	the relative tolerance.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> xtol_abs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	possible values: xtol_abs &gt; 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	default value:   rep(0.0, length(x0))</span>
@@ -376,6 +384,15 @@ is set to <code>TRUE</code> when passing a minimization problem to <code>nloptr<
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	tolerance with xtol_abs as well. Criterion is disabled if xtol_rel is</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	non-positive.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> x_weights</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	possible values: x_weights &gt; 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	default value:   rep(1.0, length(x0))</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	current value:   (default)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	x_weights is a vector of length n (the number of elements in x)</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	giving the relative importance of each parameter x[i] when checking</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 	the relative tolerance.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> xtol_abs</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	possible values: xtol_abs &gt; 0</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 	default value:   rep(0.0, length(x0))</span>
@@ -526,7 +543,7 @@ is set to <code>TRUE</code> when passing a minimization problem to <code>nloptr<
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
 </div>
 
     </footer></div>
